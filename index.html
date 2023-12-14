@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Main Page</title>
+  <title>Tabbed Downloads</title>
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -27,14 +27,50 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    h2 {
+    .tabs {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .tab {
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+
+    .tab:hover {
+      background-color: #ccc;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .downloads {
+      list-style: none;
+      padding: 0;
+    }
+
+    .download-link {
+      margin-bottom: 10px;
+      display: block;
+      background-color: #ddd;
+      padding: 10px;
+      text-align: center;
+      text-decoration: none;
       color: #333;
     }
 
-    .category {
-      border: 1px solid #ddd;
-      padding: 15px;
-      margin-bottom: 20px;
+    .download-link:hover {
+      background-color: #ccc;
     }
 
     footer {
@@ -50,38 +86,83 @@
 </head>
 <body>
   <header>
-    <h1>Welcome to My Website!</h1>
+    <h1>Welcome to My Tabbed Downloads!</h1>
   </header>
 
   <main>
-    <section class="category">
-      <h2>Category 1</h2>
-      <p>This is the content of Category 1.</p>
-    </section>
+    <ul class="tabs">
+      <li class="tab" onclick="showTab('tab1')">Tab 1</li>
+      <li class="tab" onclick="showTab('tab2')">Tab 2</li>
+      <li class="tab" onclick="showTab('tab3')">Tab 3</li>
+      <li class="tab" onclick="showTab('tab4')">Tab 4</li>
+      <li class="tab" onclick="showTab('tab5')">Tab 5</li>
+    </ul>
 
-    <section class="category">
-      <h2>Category 2</h2>
-      <p>This is the content of Category 2.</p>
-    </section>
+    <div id="tab1" class="tab-content active">
+      <h2>Tab 1 Downloads</h2>
+      <ul class="downloads">
+        <li><a class="download-link" href="#">Download 1</a></li>
+        <li><a class="download-link" href="#">Download 2</a></li>
+        <li><a class="download-link" href="#">Download 3</a></li>
+        <li><a class="download-link" href="#">Download 4</a></li>
+      </ul>
+    </div>
 
-    <section class="category">
-      <h2>Category 3</h2>
-      <p>This is the content of Category 3.</p>
-    </section>
+    <div id="tab2" class="tab-content">
+      <h2>Tab 2 Downloads</h2>
+      <ul class="downloads">
+        <li><a class="download-link" href="#">Download 1</a></li>
+        <li><a class="download-link" href="#">Download 2</a></li>
+        <li><a class="download-link" href="#">Download 3</a></li>
+        <li><a class="download-link" href="#">Download 4</a></li>
+      </ul>
+    </div>
 
-    <section class="category">
-      <h2>Category 4</h2>
-      <p>This is the content of Category 4.</p>
-    </section>
+    <div id="tab3" class="tab-content">
+      <h2>Tab 3 Downloads</h2>
+      <ul class="downloads">
+        <li><a class="download-link" href="#">Download 1</a></li>
+        <li><a class="download-link" href="#">Download 2</a></li>
+        <li><a class="download-link" href="#">Download 3</a></li>
+        <li><a class="download-link" href="#">Download 4</a></li>
+      </ul>
+    </div>
 
-    <section class="category">
-      <h2>Category 5</h2>
-      <p>This is the content of Category 5.</p>
-    </section>
+    <div id="tab4" class="tab-content">
+      <h2>Tab 4 Downloads</h2>
+      <ul class="downloads">
+        <li><a class="download-link" href="#">Download 1</a></li>
+        <li><a class="download-link" href="#">Download 2</a></li>
+        <li><a class="download-link" href="#">Download 3</a></li>
+        <li><a class="download-link" href="#">Download 4</a></li>
+      </ul>
+    </div>
+
+    <div id="tab5" class="tab-content">
+      <h2>Tab 5 Downloads</h2>
+      <ul class="downloads">
+        <li><a class="download-link" href="#">Download 1</a></li>
+        <li><a class="download-link" href="#">Download 2</a></li>
+        <li><a class="download-link" href="#">Download 3</a></li>
+        <li><a class="download-link" href="#">Download 4</a></li>
+      </ul>
+    </div>
   </main>
 
   <footer>
-    <p>© 2023 Your Website. All rights reserved.</p>
+    <p>© 2023 Your Tabbed Downloads. All rights reserved.</p>
   </footer>
+
+  <script>
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll('.tab-content');
+      tabs.forEach(tab => {
+        tab.classList.remove('active');
+      });
+
+      const activeTab = document.getElementById(tabId);
+      activeTab.classList.add('active');
+    }
+  </script>
 </body>
 </html>
