@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZYPHER.IO</title>
   <style>
-     body {
+    body {
       font-family: 'Arial', sans-serif;
       background-color: #111;
       margin: 0;
@@ -83,7 +83,7 @@
       background-color: #555;
     }
 
-    footer {
+    .footer {
       background-color: #222;
       color: #fff;
       text-align: center;
@@ -92,6 +92,14 @@
       bottom: 0;
       width: 100%;
       border-radius: 8px;
+    }
+
+    /* Added style for the active tab indicator */
+    .active-tab-indicator {
+      text-align: center;
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 18px;
     }
   </style>
 </head>
@@ -108,6 +116,9 @@
       <li class="tab" onclick="showTab('tab4')">Tab 4</li>
       <li class="tab" onclick="showTab('tab5')">Tab 5</li>
     </ul>
+
+    <!-- Active Tab Indicator -->
+    <div class="active-tab-indicator" id="activeTabIndicator"></div>
 
     <div id="tab1" class="tab-content active">
       <h2>Tab 1 Downloads</h2>
@@ -160,9 +171,9 @@
     </div>
   </main>
 
-  <footer>
+  <div class="footer">
     <p>© 2023 ZYPHER. All rights reserved.</p>
-  </footer>
+  </div>
 
   <script>
     function showTab(tabId) {
@@ -173,6 +184,10 @@
 
       const activeTab = document.getElementById(tabId);
       activeTab.classList.add('active');
+
+      // Update the active tab indicator text
+      const activeTabText = document.getElementById('activeTabIndicator');
+      activeTabText.textContent = `Active Tab: ${tabId}`;
     }
   </script>
 </body>
