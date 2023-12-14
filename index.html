@@ -100,6 +100,7 @@
       margin-top: 10px;
       font-weight: bold;
       font-size: 18px;
+      color: #fff;
     }
   </style>
 </head>
@@ -118,7 +119,7 @@
     </ul>
 
     <!-- Active Tab Indicator -->
-    <div class="active-tab-indicator" id="activeTabIndicator"></div>
+    <div id="activeTabIndicator" class="active-tab-indicator"></div>
 
     <div id="tab1" class="tab-content active">
       <h2>Tab 1 Downloads</h2>
@@ -165,30 +166,4 @@
       <ul class="downloads">
         <li><a class="download-link" href="#">Download 1</a></li>
         <li><a class="download-link" href="#">Download 2</a></li>
-        <li><a class="download-link" href="#">Download 3</a></li>
-        <li><a class="download-link" href="#">Download 4</a></li>
-      </ul>
-    </div>
-  </main>
-
-  <div class="footer">
-    <p>© 2023 ZYPHER. All rights reserved.</p>
-  </div>
-
-  <script>
-    function showTab(tabId) {
-      const tabs = document.querySelectorAll('.tab-content');
-      tabs.forEach(tab => {
-        tab.classList.remove('active');
-      });
-
-      const activeTab = document.getElementById(tabId);
-      activeTab.classList.add('active');
-
-      // Update the active tab indicator text
-      const activeTabText = document.getElementById('activeTabIndicator');
-      activeTabText.textContent = `Active Tab: ${tabId}`;
-    }
-  </script>
-</body>
-</html>
+       
