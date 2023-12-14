@@ -1,133 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main Page</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
 
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 15px;
-  text-align: center;
-}
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-nav li {
-  display: inline;
-  margin-right: 15px;
-}
+    h2 {
+      color: #333;
+    }
 
-nav a {
-  text-decoration: none;
-  color: #fff;
-}
+    .category {
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
 
-main {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-section {
-  margin-bottom: 20px;
-}
-
-h2 {
-  color: #333;
-}
-
-form {
-  display: grid;
-  grid-gap: 10px;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-  color: #333;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 8px;
-  box-sizing: border-box;
-  margin-bottom: 10px;
-}
-
-input[type="submit"] {
-  background-color: #333;
-  color: #fff;
-  cursor: pointer;
-  padding: 10px;
-  border: none;
-}
-
-input[type="submit"]:hover {
-  background-color: #555;
-}
-
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-</style>
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Welcome to my beta website!</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
+    <h1>Welcome to My Website!</h1>
   </header>
 
   <main>
-    <section>
-      <h2>About</h2>
-      <p>This is a brief description about myself or my website.</p>
+    <section class="category">
+      <h2>Category 1</h2>
+      <p>This is the content of Category 1.</p>
     </section>
 
-    <section>
-      <h2>Contact</h2>
-      <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name">
+    <section class="category">
+      <h2>Category 2</h2>
+      <p>This is the content of Category 2.</p>
+    </section>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
+    <section class="category">
+      <h2>Category 3</h2>
+      <p>This is the content of Category 3.</p>
+    </section>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message"></textarea>
+    <section class="category">
+      <h2>Category 4</h2>
+      <p>This is the content of Category 4.</p>
+    </section>
 
-        <input type="submit" value="Submit">
-      </form>
+    <section class="category">
+      <h2>Category 5</h2>
+      <p>This is the content of Category 5.</p>
     </section>
   </main>
 
   <footer>
-    <p>© 2023 ZYPHER. All rights reserved.</p>
+    <p>© 2023 Your Website. All rights reserved.</p>
   </footer>
 </body>
 </html>
