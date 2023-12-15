@@ -106,12 +106,12 @@
 </head>
 <body>
   <header>
-    <h1>Welcome to Zypher.io this is where my creations links are made also this website is open source so feel free to check it out this was also made by Lewis k:)</h1>
+    <h1>Welcome to Zypher.io this is where my creations links are made :)</h1>
   </header>
 
   <main>
     <ul class="tabs">
-      <li class="tab" onclick="showTab('my info')">my info</li>
+      <li class="tab" onclick="showTab('tab1')">Tab 1</li>
       <li class="tab" onclick="showTab('tab2')">Tab 2</li>
       <li class="tab" onclick="showTab('tab3')">Tab 3</li>
       <li class="tab" onclick="showTab('tab4')">Tab 4</li>
@@ -124,7 +124,7 @@
     <div id="tab1" class="tab-content active">
       <h2>Tab 1 Downloads</h2>
       <ul class="downloads">
-        <li><a class="download-link" href="https://github.com/ZYPHER-OF/Zyph.info">my website repo</a></li>
+        <li><a class="download-link" href="#">Download 1</a></li>
         <li><a class="download-link" href="#">Download 2</a></li>
         <li><a class="download-link" href="#">Download 3</a></li>
         <li><a class="download-link" href="#">Download 4</a></li>
@@ -166,4 +166,18 @@
       <ul class="downloads">
         <li><a class="download-link" href="#">Download 1</a></li>
         <li><a class="download-link" href="#">Download 2</a></li>
-       
+        <li><a class="download-link" href="#">Download 3</a></li>
+        <li><a class="download-link" href="#">Download 4</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <div class="footer">
+    <p>© 2023 ZYPHER. All rights reserved.</p>
+  </div>
+
+  <script>
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll('.tab-content');
+      tabs.forEach(tab => {
+        tab.classList.remove
