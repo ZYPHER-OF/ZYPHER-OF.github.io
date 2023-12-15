@@ -124,50 +124,45 @@
     <div id="tab1" class="tab-content active">
       <h2>Tab 1 Downloads</h2>
       <ul class="downloads">
-        <li><a class="download-link" href="#">Download 1</a></li>
-        <li><a class="download-link" href="#">Download 2</a></li>
-        <li><a class="download-link" href="#">Download 3</a></li>
-        <li><a class="download-link" href="#">Download 4</a></li>
+        <li><a class="download-link" href="#">Git Download</a></li>
+        <li><a class="download-link" href="#">File 1</a></li>
+        <li><a class="download-link" href="#">File 2</a></li>
       </ul>
     </div>
 
     <div id="tab2" class="tab-content">
       <h2>Tab 2 Downloads</h2>
       <ul class="downloads">
-        <li><a class="download-link" href="#">Download 1</a></li>
-        <li><a class="download-link" href="#">Download 2</a></li>
-        <li><a class="download-link" href="#">Download 3</a></li>
-        <li><a class="download-link" href="#">Download 4</a></li>
+        <li><a class="download-link" href="#">Download A</a></li>
+        <li><a class="download-link" href="#">Download B</a></li>
+        <li><a class="download-link" href="#">Download C</a></li>
       </ul>
     </div>
 
     <div id="tab3" class="tab-content">
       <h2>Tab 3 Downloads</h2>
       <ul class="downloads">
-        <li><a class="download-link" href="#">Download 1</a></li>
-        <li><a class="download-link" href="#">Download 2</a></li>
-        <li><a class="download-link" href="#">Download 3</a></li>
-        <li><a class="download-link" href="#">Download 4</a></li>
+        <li><a class="download-link" href="#">Download X</a></li>
+        <li><a class="download-link" href="#">Download Y</a></li>
+        <li><a class="download-link" href="#">Download Z</a></li>
       </ul>
     </div>
 
     <div id="tab4" class="tab-content">
       <h2>Tab 4 Downloads</h2>
       <ul class="downloads">
-        <li><a class="download-link" href="#">Download 1</a></li>
-        <li><a class="download-link" href="#">Download 2</a></li>
-        <li><a class="download-link" href="#">Download 3</a></li>
-        <li><a class="download-link" href="#">Download 4</a></li>
+        <li><a class="download-link" href="#">Download Alpha</a></li>
+        <li><a class="download-link" href="#">Download Beta</a></li>
+        <li><a class="download-link" href="#">Download Gamma</a></li>
       </ul>
     </div>
 
     <div id="tab5" class="tab-content">
       <h2>Tab 5 Downloads</h2>
       <ul class="downloads">
-        <li><a class="download-link" href="#">Download 1</a></li>
-        <li><a class="download-link" href="#">Download 2</a></li>
-        <li><a class="download-link" href="#">Download 3</a></li>
-        <li><a class="download-link" href="#">Download 4</a></li>
+        <li><a class="download-link" href="#">Download One</a></li>
+        <li><a class="download-link" href="#">Download Two</a></li>
+        <li><a class="download-link" href="#">Download Three</a></li>
       </ul>
     </div>
   </main>
@@ -180,4 +175,16 @@
     function showTab(tabId) {
       const tabs = document.querySelectorAll('.tab-content');
       tabs.forEach(tab => {
-        tab.classList.remove
+        tab.classList.remove('active');
+      });
+
+      const activeTab = document.getElementById(tabId);
+      activeTab.classList.add('active');
+
+      // Update the active tab indicator text
+      const activeTabText = document.getElementById('activeTabIndicator');
+      activeTabText.textContent = `Active Tab: ${tabId}`;
+    }
+  </script>
+</body>
+</html>
